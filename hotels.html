@@ -1,0 +1,2138 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Hotels - Booking.Com</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /* body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        } */
+
+        /* .page-header {
+            background: linear-gradient(rgba(0, 0, 0, .6),
+                    rgba(0, 0, 0, .6)),
+                url("Hotel-img/hotel-img1.png");
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        } */
+
+        /* .property-card {
+            transition: 0.3s;
+            cursor: pointer;
+            border: none;
+        }
+
+        .property-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .15);
+        }
+
+        .property-icon {
+            font-size: 45px;
+        }
+
+        .property-card img {
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .hotel-card {
+            transition: .3s;
+        }
+
+        .hotel-card:hover {
+            transform: translateY(-5px);
+        }*/
+
+        /* .hotel-card img {
+            height: 220px;
+            object-fit: cover;
+        } */
+
+        /* .search-box {
+            margin-top: -40px;
+            position: relative;
+            z-index: 5;
+        } */
+    </style>
+</head>
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+
+        <div class="container">
+
+            <a href="index.html" class="navbar-brand d-flex align-items-center fw-bold fs-4 text-primary">
+
+                <img src="Hotel-img/staynest-logo.png" alt="StayNest Logo" width="45" height="45" class="me-2">
+
+                <span>
+                    Stay<span class="text-warning">Nest</span>
+                </span>
+
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="hotels.html" class="nav-link active">
+                            Hotels
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="booking.html" class="nav-link">
+                            Bookings
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="profile.html">
+                            Profile
+                        </a>
+                    </li>
+
+
+
+                    <li class="nav-item ms-lg-2">
+                        <a href="login.html" class="btn btn-danger login-btn">
+                            Login
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ================= PAGE HEADER ================= -->
+
+    <!-- PAGE HEADER -->
+    <section class="bg-dark text-white text-center py-5"
+        style="background-image: url('Hotel-img/hotel-img1.png'); background-size: cover; background-position: center;">
+
+        <div class="page-header text-white text-center">
+
+            <div>
+
+
+
+                <h1 class="display-4 fw-bold">
+                    Find Your Perfect Hotel
+                </h1>
+
+                <p class="lead">
+                    Discover hotels, resorts and apartments
+                    at amazing prices
+                </p>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ================= SEARCH ================= -->
+
+    <section class="container search-box mt-5">
+
+        <div class="card shadow-lg border-0">
+
+            <div class="card-body p-4">
+
+                <h4 class="fw-bold mb-3">
+                    Search Properties
+                </h4>
+
+                <form>
+
+                    <div class="row g-3">
+
+                        <div class="col-md-4">
+
+                            <label class="form-label">
+                                Destination
+                            </label>
+
+                            <input type="text" class="form-control" placeholder="Where are you going?">
+
+                        </div>
+
+
+                        <div class="col-md-2">
+
+                            <label class="form-label">
+                                Check-in
+                            </label>
+
+                            <input type="date" class="form-control">
+
+                        </div>
+
+
+                        <div class="col-md-2">
+
+                            <label class="form-label">
+                                Check-out
+                            </label>
+
+                            <input type="date" class="form-control">
+
+                        </div>
+
+
+                        <div class="col-md-2">
+
+                            <label class="form-label">
+                                Guests
+                            </label>
+
+                            <select class="form-select">
+
+                                <option>1 Guest</option>
+                                <option>2 Guests</option>
+                                <option>3 Guests</option>
+                                <option>4 Guests</option>
+                                <option>5+ Guests</option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="col-md-2 d-flex align-items-end">
+
+                            <button class="btn btn-primary w-100">
+                                Search
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PROPERTY TYPE ================= -->
+
+    <section class="container py-5">
+
+        <div class="text-center mb-5">
+
+            <h2 class="fw-bold">
+                Browse by Property Type
+            </h2>
+
+            <p class="text-muted">
+                Choose the type of property that suits
+                your travel needs
+            </p>
+
+        </div>
+
+
+        <div class="row g-4">
+
+
+            <!-- Hotel -->
+
+            <div class="col-6 col-md-4 col-lg-2">
+
+                <div class="card property-card shadow-sm text-center h-100">
+
+                    <div class="card-body">
+
+                        <div class="property-icon fs-1">
+                            🏨
+                        </div>
+
+                        <h5 class="fw-bold mt-3">
+                            Hotels
+                        </h5>
+
+                        <p class="text-muted small">
+                            250+ Properties
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Resort -->
+
+            <div class="col-6 col-md-4 col-lg-2">
+
+                <div class="card property-card shadow-sm text-center h-100">
+
+                    <div class="card-body">
+
+                        <div class="property-icon fs-1">
+                            🏖️
+                        </div>
+
+                        <h5 class="fw-bold mt-3">
+                            Resorts
+                        </h5>
+
+                        <p class="text-muted small">
+                            120+ Properties
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Apartment -->
+
+            <div class="col-6 col-md-4 col-lg-2">
+
+                <div class="card property-card shadow-sm text-center h-100">
+
+                    <div class="card-body">
+
+                        <div class="property-icon fs-1">
+                            🏢
+                        </div>
+
+                        <h5 class="fw-bold mt-3">
+                            Apartments
+                        </h5>
+
+                        <p class="text-muted small">
+                            180+ Properties
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Villa -->
+
+            <div class="col-6 col-md-4 col-lg-2">
+
+                <div class="card property-card shadow-sm text-center h-100 ">
+
+                    <div class="card-body">
+
+                        <div class="property-icon fs-1">
+                            🏡
+                        </div>
+
+                        <h5 class="fw-bold mt-3">
+                            Villas
+                        </h5>
+
+                        <p class="text-muted small">
+                            90+ Properties
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Guest House -->
+
+            <div class="col-6 col-md-4 col-lg-2">
+
+                <div class="card property-card shadow-sm text-center h-100">
+
+                    <div class="card-body">
+
+                        <div class="property-icon fs-1">
+                            🏠
+                        </div>
+
+                        <h5 class="fw-bold mt-3">
+                            Guest Houses
+                        </h5>
+
+                        <p class="text-muted small">
+                            75+ Properties
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Hostel -->
+
+            <div class="col-6 col-md-4 col-lg-2">
+
+                <div class="card property-card shadow-sm text-center h-100">
+
+                    <div class="card-body">
+
+                        <div class="property-icon fs-1">
+                            🛏️
+                        </div>
+
+                        <h5 class="fw-bold mt-3">
+                            Hostels
+                        </h5>
+
+                        <p class="text-muted small">
+                            60+ Properties
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= POPULAR HOTELS ================= -->
+
+    <section class="py-5 bg-white">
+
+        <div class="container ">
+
+            <div class="d-flex justify-content-between
+                align-items-center mb-4">
+
+                <div>
+
+                    <h2 class="fw-bold">
+                        Popular Hotels
+                    </h2>
+
+                    <p class="text-muted mb-0">
+                        Top-rated properties for your next trip
+                    </p>
+
+                </div>
+
+                <a href="#moreHotels" class="btn btn-outline-primary" data-bs-toggle="collapse" role="button"
+                    aria-expanded="false" aria-controls="moreHotels">
+                    View All
+                </a>
+            </div>
+
+
+            <div class="row g-4">
+                <!-- Hotel 1 -->
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="card hotel-card shadow-sm border-0 h-100">
+
+                        <!-- Hotel Carousel -->
+                        <div id="hotelCarousel1" class="carousel slide carousel-fade">
+
+                            <div class="carousel-inner">
+
+                                <div class="carousel-item active">
+                                    <img src="Hotel-img/grand-place-hotel.png" class="d-block w-100"
+                                        style="height: 250px; object-fit: cover;" alt="Hotel Image 1">
+                                </div>
+
+                                <div class="carousel-item">
+                                    <img src="Hotel-img/hotel-img2.png" class="d-block w-100"
+                                        style="height: 250px; object-fit: cover;" alt="Hotel Image 2">
+                                </div>
+
+                                <div class="carousel-item">
+                                    <img src="Hotel-img/hotel-img3.png" class="d-block w-100"
+                                        style="height: 250px; object-fit: cover;" alt="Hotel Image 3">
+                                </div>
+
+                            </div>
+
+                            <button class="carousel-control-prev" type="button" data-bs-target="#hotelCarousel1"
+                                data-bs-slide="prev">
+
+                                <span class="carousel-control-prev-icon"></span>
+
+                            </button>
+
+                            <button class="carousel-control-next" type="button" data-bs-target="#hotelCarousel1"
+                                data-bs-slide="next">
+
+                                <span class="carousel-control-next-icon"></span>
+
+                            </button>
+
+                            <div class="carousel-caption d-none d-md-block">
+                                <span class="badge bg-dark">
+                                    Explore More Photos
+                                </span>
+                            </div>
+
+                        </div>
+
+                        <!-- Hotel Details -->
+                        <div class="card-body">
+
+                            <div class="d-flex justify-content-between">
+
+                                <h5 class="fw-bold">
+                                    Grand Palace Hotel
+                                </h5>
+
+                                <span class="badge bg-primary">
+                                    4.8 ★
+                                </span>
+
+                            </div>
+
+                            <p class="text-muted">
+                                📍 Goa, India
+                            </p>
+
+                            <p class="small">
+                                Luxury hotel with swimming pool,
+                                restaurant and free Wi-Fi.
+                            </p>
+
+                            <div class="d-flex justify-content-between align-items-center">
+
+                                <h5 class="text-primary">
+                                    ₹4,999
+                                    <small class="text-muted">
+                                        /night
+                                    </small>
+                                </h5>
+
+                                <a href="booking.html" class="btn btn-primary" data-bs-toggle="modal"data-bs-target="#hotelbook">
+                                    Book
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Hotel 2 -->
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="card hotel-card shadow-sm border-0 h-100">
+
+                        <!-- Hotel Carousel -->
+                        <div id="hotelCarousel2" class="carousel slide carousel-fade">
+
+                            <div class="carousel-inner">
+
+                                <div class="carousel-item active">
+                                    <img src="Hotel-img/royal-mumbai-hotel.png" class="d-block w-100"
+                                        style="height: 250px; object-fit: cover;" alt="Hotel Image 1">
+                                </div>
+
+                                <div class="carousel-item">
+                                    <img src="Hotel-img/hotel-img2.png" class="d-block w-100"
+                                        style="height: 250px; object-fit: cover;" alt="Hotel Image 2">
+                                </div>
+
+                                <div class="carousel-item">
+                                    <img src="Hotel-img/hotel-img3.png" class="d-block w-100"
+                                        style="height: 250px; object-fit: cover;" alt="Hotel Image 3">
+                                </div>
+
+                            </div>
+
+                            <button class="carousel-control-prev" type="button" data-bs-target="#hotelCarousel2"
+                                data-bs-slide="prev">
+
+                                <span class="carousel-control-prev-icon"></span>
+
+                            </button>
+
+                            <button class="carousel-control-next" type="button" data-bs-target="#hotelCarousel2"
+                                data-bs-slide="next">
+
+                                <span class="carousel-control-next-icon"></span>
+
+                            </button>
+
+                            <div class="carousel-caption d-none d-md-block">
+                                <span class="badge bg-dark">
+                                    Explore More Photos
+                                </span>
+                            </div>
+
+                        </div>
+
+                        <!-- Hotel Details -->
+                        <div class="card-body">
+
+                            <div class="d-flex justify-content-between">
+
+                                <h5 class="fw-bold">
+                                    Royal Mumbai Hotel
+                                </h5>
+
+                                <span class="badge bg-primary">
+                                    4.7 ★
+                                </span>
+
+                            </div>
+
+                            <p class="text-muted">
+                                📍 Mumbai, India
+                            </p>
+
+                            <p class="small">
+                                Modern city hotel with comfortable rooms,
+                                restaurant and complimentary Wi-Fi.
+                            </p>
+
+                            <div class="d-flex justify-content-between align-items-center">
+
+                                <h5 class="text-primary">
+                                    ₹5,499
+                                    <small class="text-muted">
+                                        /night
+                                    </small>
+                                </h5>
+
+                                <a href="booking.html" class="btn btn-primary" data-bs-toggle="modal"data-bs-target="#hotelbook">
+                                    Book
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Hotel 3 -->
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="card hotel-card shadow-sm border-0 h-100">
+
+                        <!-- Hotel Carousel -->
+                        <div id="hotelCarousel3" class="carousel slide carousel-fade">
+
+                            <div class="carousel-inner">
+
+                                <div class="carousel-item active">
+                                    <img src="Hotel-img/delhi-luxury.png" class="d-block w-100"
+                                        style="height: 250px; object-fit: cover;" alt="Hotel Image 1">
+                                </div>
+
+                                <div class="carousel-item">
+                                    <img src="Hotel-img/hotel-img2.png" class="d-block w-100"
+                                        style="height: 250px; object-fit: cover;" alt="Hotel Image 2">
+                                </div>
+
+                                <div class="carousel-item">
+                                    <img src="Hotel-img/hotel-img3.png" class="d-block w-100"
+                                        style="height: 250px; object-fit: cover;" alt="Hotel Image 3">
+                                </div>
+
+                            </div>
+
+                            <button class="carousel-control-prev" type="button" data-bs-target="#hotelCarousel3"
+                                data-bs-slide="prev">
+
+                                <span class="carousel-control-prev-icon"></span>
+
+                            </button>
+
+                            <button class="carousel-control-next" type="button" data-bs-target="#hotelCarousel3"
+                                data-bs-slide="next">
+
+                                <span class="carousel-control-next-icon"></span>
+
+                            </button>
+
+                            <div class="carousel-caption d-none d-md-block">
+                                <span class="badge bg-dark">
+                                    Explore More Photos
+                                </span>
+                            </div>
+
+                        </div>
+
+                        <!-- Hotel Details -->
+                        <div class="card-body">
+
+                            <div class="d-flex justify-content-between">
+
+                                <h5 class="fw-bold">
+                                    Delhi Luxury Hotel
+                                </h5>
+
+                                <span class="badge bg-primary">
+                                    4.2 ★
+                                </span>
+
+                            </div>
+
+                            <p class="text-muted">
+                                📍 New Delhi, India
+                            </p>
+
+                            <p class="small">
+                                Premium hotel offering elegant rooms,
+                                fine dining and excellent city access.
+                            </p>
+
+                            <div class="d-flex justify-content-between align-items-center">
+
+                                <h5 class="text-primary">
+                                    ₹4,999
+                                    <small class="text-muted">
+                                        /night
+                                    </small>
+                                </h5>
+
+                                <a href="booking.html" class="btn btn-primary" data-bs-toggle="modal"data-bs-target="#hotelbook">
+                                    Book
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- More Popular Hotels -->
+
+                <div class="collapse mt-4" id="moreHotels">
+
+                    <div class="row g-4">
+
+                        <!-- Hotel 4 -->
+
+                        <div class="col-md-6 col-lg-4">
+
+                            <div class="card hotel-card shadow-sm border-0 h-100">
+
+                                <div class="ratio ratio-16x9">
+
+                                    <img src="Hotel-img/hotel-img1.png" class="w-100 h-100 object-fit-cover"
+                                        alt="Delhi">
+
+                                </div>
+
+                                <div class="card-body">
+
+                                    <div class="d-flex justify-content-between">
+
+                                        <h5 class="fw-bold">
+                                            Ocean View Resort
+                                        </h5>
+
+                                        <span class="badge bg-primary">
+                                            4.6 ★
+                                        </span>
+
+                                    </div>
+
+                                    <p class="text-muted">
+                                        📍 Goa, India
+                                    </p>
+
+                                    <p class="small">
+                                        Beautiful beach resort with swimming
+                                        pool and premium rooms.
+                                    </p>
+
+                                    <div class="d-flex justify-content-between align-items-center">
+
+                                        <h5 class="text-primary">
+                                            ₹5,999
+                                            <small class="text-muted">
+                                                /night
+                                            </small>
+                                        </h5>
+
+                                        <a href="booking.html" class="btn btn-primary" data-bs-toggle="modal"data-bs-target="#hotelbook">
+                                            Book
+                                        </a>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Hotel 5 -->
+
+                        <div class="col-md-6 col-lg-4">
+
+                            <div class="card hotel-card shadow-sm border-0 h-100">
+
+                                <div class="ratio ratio-16x9">
+
+                                    <img src="Hotel-img/hotel-img2.png" class="w-100 h-100 object-fit-cover"
+                                        alt="Delhi">
+
+                                </div>
+
+                                <div class="card-body">
+
+                                    <div class="d-flex justify-content-between">
+
+                                        <h5 class="fw-bold">
+                                            Mumbai Grand Hotel
+                                        </h5>
+
+                                        <span class="badge bg-primary">
+                                            4.5 ★
+                                        </span>
+
+                                    </div>
+
+                                    <p class="text-muted">
+                                        📍 Mumbai, India
+                                    </p>
+
+                                    <p class="small">
+                                        Modern luxury hotel with city views,
+                                        restaurant and free Wi-Fi.
+                                    </p>
+
+                                    <div class="d-flex justify-content-between align-items-center">
+
+                                        <h5 class="text-primary">
+                                            ₹4,799
+                                            <small class="text-muted">
+                                                /night
+                                            </small>
+                                        </h5>
+
+                                        <a href="booking.html" class="btn btn-primary" data-bs-toggle="modal"data-bs-target="#hotelbook">
+                                            Book
+                                        </a>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Hotel 6 -->
+
+                        <div class="col-md-6 col-lg-4">
+
+                            <div class="card hotel-card shadow-sm border-0 h-100">
+
+                                <div class="ratio ratio-16x9">
+
+                                    <img src="Hotel-img/hotel-img3.png" class="w-100 h-100 object-fit-cover"
+                                        alt="Delhi">
+
+                                </div>
+
+
+
+                                <div class="card-body">
+
+                                    <div class="d-flex justify-content-between">
+
+                                        <h5 class="fw-bold">
+                                            Royal Delhi Hotel
+                                        </h5>
+
+                                        <span class="badge bg-primary">
+                                            4.8 ★
+                                        </span>
+
+                                    </div>
+
+                                    <p class="text-muted">
+                                        📍 New Delhi, India
+                                    </p>
+
+                                    <p class="small">
+                                        Premium rooms located near major
+                                        tourist attractions.
+                                    </p>
+
+                                    <div class="d-flex justify-content-between align-items-center">
+
+                                        <h5 class="text-primary">
+                                            ₹5,299
+                                            <small class="text-muted">
+                                                /night
+                                            </small>
+                                        </h5>
+
+                                        <a href="booking.html" class="btn btn-primary" data-bs-toggle="modal"data-bs-target="#hotelbook">
+                                            Book
+                                        </a>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Hotel 7 -->
+
+                        <div class="col-md-6 col-lg-4">
+
+                            <div class="card hotel-card shadow-sm border-0 h-100">
+
+                                <div class="ratio ratio-16x9">
+
+                                    <img src="Hotel-img/hotel-img1.png" class="w-100 h-100 object-fit-cover"
+                                        alt="Delhi">
+
+                                </div>
+                                <div class="card-body">
+
+                                    <div class="d-flex justify-content-between">
+
+                                        <h5 class="fw-bold">
+                                            Beach Paradise Hotel
+                                        </h5>
+
+                                        <span class="badge bg-primary">
+                                            4.7 ★
+                                        </span>
+
+                                    </div>
+
+                                    <p class="text-muted">
+                                        📍 Goa, India
+                                    </p>
+
+                                    <p class="small">
+                                        Relaxing beachfront property with
+                                        comfortable rooms and dining.
+                                    </p>
+
+                                    <div class="d-flex justify-content-between align-items-center">
+
+                                        <h5 class="text-primary">
+                                            ₹6,299
+                                            <small class="text-muted">
+                                                /night
+                                            </small>
+                                        </h5>
+
+                                        <a href="booking.html" class="btn btn-primary" data-bs-toggle="modal"data-bs-target="#hotelbook">
+                                            Book
+                                        </a>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Hotel 8 -->
+
+                        <div class="col-md-6 col-lg-4">
+
+                            <div class="card hotel-card shadow-sm border-0 h-100">
+
+                                <div class="ratio ratio-16x9">
+
+                                    <img src="Hotel-img/hotel-img3.png" class="w-100 h-100 object-fit-cover"
+                                        alt="Delhi">
+
+                                </div>
+                                <div class="card-body">
+
+                                    <div class="d-flex justify-content-between">
+
+                                        <h5 class="fw-bold">
+                                            City Star Hotel
+                                        </h5>
+
+                                        <span class="badge bg-primary">
+                                            4.4 ★
+                                        </span>
+
+                                    </div>
+
+                                    <p class="text-muted">
+                                        📍 Mumbai, India
+                                    </p>
+
+                                    <p class="small">
+                                        Comfortable rooms in the heart of
+                                        Mumbai with modern facilities.
+                                    </p>
+
+                                    <div class="d-flex justify-content-between align-items-center">
+
+                                        <h5 class="text-primary">
+                                            ₹3,999
+                                            <small class="text-muted">
+                                                /night
+                                            </small>
+                                        </h5>
+
+                                        <a href="booking.html" class="btn btn-primary">
+                                            Book
+                                        </a>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Hotel 9 -->
+
+                        <div class="col-md-6 col-lg-4">
+
+                            <div class="card hotel-card shadow-sm border-0 h-100 w-100">
+
+                                <div class="ratio ratio-16x9">
+                                    <img src="Hotel-img/hotel-img3.png" class="card-img-top img-fluid"
+                                        alt="Capital Palace">
+                                </div>
+
+                                <div class="card-body">
+
+                                    <div class="d-flex justify-content-between">
+
+                                        <h5 class="fw-bold">
+                                            Capital Palace
+                                        </h5>
+
+                                        <span class="badge bg-primary">
+                                            4.6 ★
+                                        </span>
+
+                                    </div>
+
+                                    <p class="text-muted">
+                                        📍 New Delhi, India
+                                    </p>
+
+                                    <p class="small">
+                                        Elegant rooms, excellent service and
+                                        convenient city location.
+                                    </p>
+
+                                    <div class="d-flex justify-content-between align-items-center">
+
+                                        <h5 class="text-primary">
+                                            ₹4,499
+                                            <small class="text-muted">
+                                                /night
+                                            </small>
+                                        </h5>
+
+                                        <a href="booking.html" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#hotelbook">
+                                            Book
+                                        </a>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="modal" tabindex="-1" id="hotelbook">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title fw-bold bg-danger w-100 text-center p-2 ">Book Your Hotel</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="disabledSelect" class="form-label fw-bold">Select Hotels</label>
+                                    <select id="disabledSelect" class="form-select">
+                                        <option>Select Hotels</option>
+                                        <option>Grand Palce Hotel</option>
+                                        <option> Royal Mumbai Hotel</option>
+                                        <option>Delhi Luxury Hotel</option>
+
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label fw-bold">Guest Name</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp">
+
+                                </div>
+
+                                <div class="mb-3 ">
+                                    <label for="exampleInputEmail1" class="form-label fw-bold">Email address</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp">
+                                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.
+                                    </div>
+                                </div>
+
+                                <div class="row">
+
+                                    <div class="mb-3 col-md-6">
+                                        <label for="exampleInputEmail1" class="form-label fw-bold">Cheak-in Date</label>
+                                        <input type="date" class="form-control" id="exampleInputEmail1"
+                                            aria-describedby="emailHelp">
+
+                                    </div>
+
+                                    <div class="mb-3 col-md-6">
+                                        <label for="exampleInputEmail1" class="form-label fw-bold">Cheak-out
+                                            Date</label>
+                                        <input type="date" class="form-control" id="exampleInputEmail1"
+                                            aria-describedby="emailHelp">
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="row">
+
+                                    <div class="mb-3 col-md-6">
+
+                                        <label class="form-label fw-semibold">
+                                            Number of Guests
+                                        </label>
+
+                                        <input type="number" id="guests" class="form-control" min="1" value="1"
+                                            required>
+                                    </div>
+
+                                    <div class="mb-3 col-md-6">
+
+                                        <label class="form-label fw-semibold ">
+                                            Number of Rooms
+                                        </label>
+
+                                        <input type="number" id="guests" class="form-control" min="1" value="1"
+                                            required>
+                                    </div>
+
+                                </div>
+
+
+
+
+
+
+                            </form>
+
+                        </div>
+                        <div class="modal-footer">
+                            <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+                            <button type="button" class="btn btn-primary w-100 fw-bold">Confirm Book</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </section>
+
+    <!-- Resort cards -->
+
+
+    <section class="py-5 bg-white">
+
+        <div class="container ">
+
+            <div class="d-flex justify-content-between
+                align-items-center mb-4">
+
+                <div>
+
+                    <h2 class="fw-bold">
+                        Popular Resorts
+                    </h2>
+
+                    <p class="text-muted mb-0">
+                        Top-rated properties for your next trip
+                    </p>
+
+                </div>
+
+                <a href="#moreHotels" class="btn btn-outline-primary" data-bs-toggle="collapse" role="button"
+                    aria-expanded="false" aria-controls="moreHotels">
+                    View All
+                </a>
+            </div>
+
+
+            <div class="row g-4">
+                <!-- Resort 1 -->
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="card hotel-card shadow-sm border-0 h-100">
+
+                        <!-- Hotel Carousel -->
+                        <div id="hotelCarousel11" class="carousel slide carousel-fade">
+
+                            <div class="carousel-inner">
+
+                                <div class="carousel-item active">
+                                    <img src="Hotel-img/resort-1.png" class="d-block w-100"
+                                        style="height: 250px; object-fit: cover;" alt="Hotel Image 1">
+                                </div>
+
+                                <div class="carousel-item">
+                                    <img src="Hotel-img/hotel-img2.png" class="d-block w-100"
+                                        style="height: 250px; object-fit: cover;" alt="Hotel Image 2">
+                                </div>
+
+                                <div class="carousel-item">
+                                    <img src="Hotel-img/hotel-img3.png" class="d-block w-100"
+                                        style="height: 250px; object-fit: cover;" alt="Hotel Image 3">
+                                </div>
+
+                            </div>
+
+                            <button class="carousel-control-prev" type="button" data-bs-target="#hotelCarousel11"
+                                data-bs-slide="prev">
+
+                                <span class="carousel-control-prev-icon"></span>
+
+                            </button>
+
+                            <button class="carousel-control-next" type="button" data-bs-target="#hotelCarousel11"
+                                data-bs-slide="next">
+
+                                <span class="carousel-control-next-icon"></span>
+
+                            </button>
+
+                            <div class="carousel-caption d-none d-md-block">
+                                <span class="badge bg-dark">
+                                    Explore More Photos
+                                </span>
+                            </div>
+
+                        </div>
+
+                        <!-- Hotel Details -->
+                        <div class="card-body">
+
+                            <div class="d-flex justify-content-between">
+
+                                <h5 class="fw-bold">
+                                    Tropical Beach Resort
+                                </h5>
+
+                                <span class="badge bg-primary">
+                                    4.8 ★
+                                </span>
+
+                            </div>
+
+                            <p class="text-muted">
+                                📍 Goa, India
+                            </p>
+
+                            <p class="small">
+                                Beachfront resort with private beach access,
+                                swimming pool, spa and complimentary breakfast.
+                            </p>
+
+                            <div class="d-flex justify-content-between align-items-center">
+
+                                <h5 class="text-primary">
+                                    ₹6,999
+                                    <small class="text-muted">
+                                        /night
+                                    </small>
+                                </h5>
+
+                                <a href="" class="btn btn-primary" data-bs-toggle="modal"data-bs-target="#resortbook">
+                                    Book
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Hotel 2 -->
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="card hotel-card shadow-sm border-0 h-100">
+
+                        <!-- Hotel Carousel -->
+                        <div id="hotelCarousel12" class="carousel slide carousel-fade">
+
+                            <div class="carousel-inner">
+
+                                <div class="carousel-item active">
+                                    <img src="Hotel-img/mountain-resort.png" class="d-block w-100"
+                                        style="height: 250px; object-fit: cover;" alt="Hotel Image 1">
+                                </div>
+
+                                <div class="carousel-item">
+                                    <img src="Hotel-img/hotel-img2.png" class="d-block w-100"
+                                        style="height: 250px; object-fit: cover;" alt="Hotel Image 2">
+                                </div>
+
+                                <div class="carousel-item">
+                                    <img src="Hotel-img/mountain-resort.png" class="d-block w-100"
+                                        style="height: 250px; object-fit: cover;" alt="Hotel Image 3">
+                                </div>
+
+                            </div>
+
+                            <button class="carousel-control-prev" type="button" data-bs-target="#hotelCarousel12"
+                                data-bs-slide="prev">
+
+                                <span class="carousel-control-prev-icon"></span>
+
+                            </button>
+
+                            <button class="carousel-control-next" type="button" data-bs-target="#hotelCarousel12"
+                                data-bs-slide="next">
+
+                                <span class="carousel-control-next-icon"></span>
+
+                            </button>
+
+                            <div class="carousel-caption d-none d-md-block">
+                                <span class="badge bg-dark">
+                                    Explore More Photos
+                                </span>
+                            </div>
+
+                        </div>
+
+                        <!-- Hotel Details -->
+                        <div class="card-body">
+
+                            <div class="d-flex justify-content-between">
+
+                                <h5 class="fw-bold">
+                                    Mountain View Resort
+
+                                </h5>
+
+                                <span class="badge bg-primary">
+                                    4.9 ★
+                                </span>
+
+                            </div>
+
+                            <p class="text-muted">
+                                📍 Manali, Himachal Pradesh
+                            </p>
+
+                            <p class="small">
+                                Beautiful mountain resort with scenic views,
+                                comfortable rooms, restaurant and outdoor activities.
+                            </p>
+
+                            <div class="d-flex justify-content-between align-items-center">
+
+                                <h5 class="text-primary">
+                                    ₹5,999
+                                    <small class="text-muted">
+                                        /night
+                                    </small>
+                                </h5>
+
+                                <a href="" class="btn btn-primary" data-bs-toggle="modal"data-bs-target="#resortbook">
+                                    Book
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Hotel 3 -->
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="card hotel-card shadow-sm border-0 h-100">
+
+                        <!-- Hotel Carousel -->
+                        <div id="hotelCarousel13" class="carousel slide carousel-fade">
+
+                            <div class="carousel-inner">
+
+                                <div class="carousel-item active">
+                                    <img src="Hotel-img/Lake Paradise Resort.png" class="d-block w-100"
+                                        style="height: 250px; object-fit: cover;" alt="Hotel Image 1">
+                                </div>
+
+                                <div class="carousel-item">
+                                    <img src="Hotel-img/hotel-img2.png" class="d-block w-100"
+                                        style="height: 250px; object-fit: cover;" alt="Hotel Image 2">
+                                </div>
+
+                                <div class="carousel-item">
+                                    <img src="Hotel-img/hotel-img3.png" class="d-block w-100"
+                                        style="height: 250px; object-fit: cover;" alt="Hotel Image 3">
+                                </div>
+
+                            </div>
+
+                            <button class="carousel-control-prev" type="button" data-bs-target="#hotelCarousel13"
+                                data-bs-slide="prev">
+
+                                <span class="carousel-control-prev-icon"></span>
+
+                            </button>
+
+                            <button class="carousel-control-next" type="button" data-bs-target="#hotelCarousel13"
+                                data-bs-slide="next">
+
+                                <span class="carousel-control-next-icon"></span>
+
+                            </button>
+
+                            <div class="carousel-caption d-none d-md-block">
+                                <span class="badge bg-dark">
+                                    Explore More Photos
+                                </span>
+                            </div>
+
+                        </div>
+
+                        <!-- Hotel Details -->
+                        <div class="card-body">
+
+                            <div class="d-flex justify-content-between">
+
+                                <h5 class="fw-bold">
+                                    Lake Paradise Resort
+                                </h5>
+
+                                <span class="badge bg-primary">
+                                    4.8 ★
+                                </span>
+
+                            </div>
+
+                            <p class="text-muted">
+                                📍 Udaipur, Rajasthan
+                            </p>
+
+                            <p class="small">
+                                Luxury lakeside resort with elegant rooms,
+                                swimming pool, restaurant and relaxing surroundings.
+                            </p>
+
+                            <div class="d-flex justify-content-between align-items-center">
+
+                                <h5 class="text-primary">
+                                    ₹7,999
+                                    <small class="text-muted">
+                                        /night
+                                    </small>
+                                </h5>
+
+                                <a href="" class="btn btn-primary" data-bs-toggle="modal"data-bs-target="#resortbook">
+                                    Book
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="modal" tabindex="-1" id="resortbook">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title fw-bold bg-danger w-100 text-center p-2 ">Book Your Resort</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="disabledSelect" class="form-label fw-bold">Select Resorts</label>
+                                    <select id="disabledSelect" class="form-select">
+                                        <option>Select resort</option>
+                                        <option>Tropical Beach Resort</option>
+                                        <option>Mountain View Resort</option>
+                                        <option>Desert Oasis Resort</option>
+
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label fw-bold">Guest Name</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp">
+
+                                </div>
+
+                                <div class="mb-3 ">
+                                    <label for="exampleInputEmail1" class="form-label fw-bold">Email address</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp">
+                                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.
+                                    </div>
+                                </div>
+
+                                <div class="row">
+
+                                    <div class="mb-3 col-md-6">
+                                        <label for="exampleInputEmail1" class="form-label fw-bold">Cheak-in Date</label>
+                                        <input type="date" class="form-control" id="exampleInputEmail1"
+                                            aria-describedby="emailHelp">
+
+                                    </div>
+
+                                    <div class="mb-3 col-md-6">
+                                        <label for="exampleInputEmail1" class="form-label fw-bold">Cheak-out
+                                            Date</label>
+                                        <input type="date" class="form-control" id="exampleInputEmail1"
+                                            aria-describedby="emailHelp">
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="row">
+
+                                    <div class="mb-3 col-md-6">
+
+                                        <label class="form-label fw-semibold">
+                                            Number of Guests
+                                        </label>
+
+                                        <input type="number" id="guests" class="form-control" min="1" value="1"
+                                            required>
+                                    </div>
+
+                                    <div class="mb-3 col-md-6">
+
+                                        <label class="form-label fw-semibold ">
+                                            Number of Rooms
+                                        </label>
+
+                                        <input type="number" id="guests" class="form-control" min="1" value="1"
+                                            required>
+                                    </div>
+
+                                </div>
+
+
+
+
+
+
+                            </form>
+
+                        </div>
+                        <div class="modal-footer">
+                            <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+                            <button type="button" class="btn btn-primary w-100 fw-bold">Confirm Book</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </section>
+
+    </section>
+
+    <!-- Villa cards -->
+
+    <section class="py-5 bg-white">
+
+        <div class="container ">
+
+            <div class="d-flex justify-content-between
+                align-items-center mb-4">
+
+                <div>
+
+                    <h2 class="fw-bold">
+                        Popular Villas
+                    </h2>
+
+                    <p class="text-muted mb-0">
+                        Top-rated properties for your next trip
+                    </p>
+
+                </div>
+
+                <a href="#moreHotels" class="btn btn-outline-primary" data-bs-toggle="collapse" role="button"
+                    aria-expanded="false" aria-controls="moreHotels">
+                    View All
+                </a>
+            </div>
+
+
+            <div class="row g-4">
+                <!-- Resort 1 -->
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="card hotel-card shadow-sm border-0 h-100">
+
+                        <!-- Hotel Carousel -->
+                        <div id="hotelCarousel21" class="carousel slide carousel-fade">
+
+                            <div class="carousel-inner">
+
+                                <div class="carousel-item active">
+                                    <img src="Hotel-img/Ocean Breeze Villa.png" class="d-block w-100"
+                                        style="height: 250px; object-fit: cover;" alt="Hotel Image 1">
+                                </div>
+
+                                <div class="carousel-item">
+                                    <img src="Hotel-img/hotel-img2.png" class="d-block w-100"
+                                        style="height: 250px; object-fit: cover;" alt="Hotel Image 2">
+                                </div>
+
+                                <div class="carousel-item">
+                                    <img src="Hotel-img/hotel-img3.png" class="d-block w-100"
+                                        style="height: 250px; object-fit: cover;" alt="Hotel Image 3">
+                                </div>
+
+                            </div>
+
+                            <button class="carousel-control-prev" type="button" data-bs-target="#hotelCarousel21"
+                                data-bs-slide="prev">
+
+                                <span class="carousel-control-prev-icon"></span>
+
+                            </button>
+
+                            <button class="carousel-control-next" type="button" data-bs-target="#hotelCarousel21"
+                                data-bs-slide="next">
+
+                                <span class="carousel-control-next-icon"></span>
+
+                            </button>
+
+                            <div class="carousel-caption d-none d-md-block">
+                                <span class="badge bg-dark">
+                                    Explore More Photos
+                                </span>
+                            </div>
+
+                        </div>
+
+                        <!-- Hotel Details -->
+                        <div class="card-body">
+
+                            <div class="d-flex justify-content-between">
+
+                                <h5 class="fw-bold">
+                                    Ocean Breeze Villa
+                                </h5>
+
+                                <span class="badge bg-primary">
+                                    4.2 ★
+                                </span>
+
+                            </div>
+
+                            <p class="text-muted">
+                                📍 Goa, India
+                            </p>
+
+                            <p class="small">
+                                Private luxury villa with a swimming pool,
+                                beach view, spacious rooms and free Wi-Fi..
+                            </p>
+
+                            <div class="d-flex justify-content-between align-items-center">
+
+                                <h5 class="text-primary">
+                                    ₹8,999
+                                    <small class="text-muted">
+                                        /night
+                                    </small>
+                                </h5>
+
+                                <a href="booking.html" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#hotelbook">
+                                    Book
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Hotel 2 -->
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="card hotel-card shadow-sm border-0 h-100">
+
+                        <!-- Hotel Carousel -->
+                        <div id="hotelCarousel22" class="carousel slide carousel-fade">
+
+                            <div class="carousel-inner">
+
+                                <div class="carousel-item active">
+                                    <img src="Hotel-img/Green Valley Villa.png" class="d-block w-100"
+                                        style="height: 250px; object-fit: cover;" alt="Hotel Image 1">
+                                </div>
+
+                                <div class="carousel-item">
+                                    <img src="Hotel-img/hotel-img2.png" class="d-block w-100"
+                                        style="height: 250px; object-fit: cover;" alt="Hotel Image 2">
+                                </div>
+
+                                <div class="carousel-item">
+                                    <img src="Hotel-img/hotel-img3.png" class="d-block w-100"
+                                        style="height: 250px; object-fit: cover;" alt="Hotel Image 3">
+                                </div>
+
+                            </div>
+
+                            <button class="carousel-control-prev" type="button" data-bs-target="#hotelCarousel22"
+                                data-bs-slide="prev">
+
+                                <span class="carousel-control-prev-icon"></span>
+
+                            </button>
+
+                            <button class="carousel-control-next" type="button" data-bs-target="#hotelCarousel22"
+                                data-bs-slide="next">
+
+                                <span class="carousel-control-next-icon"></span>
+
+                            </button>
+
+                            <div class="carousel-caption d-none d-md-block">
+                                <span class="badge bg-dark">
+                                    Explore More Photos
+                                </span>
+                            </div>
+
+                        </div>
+
+                        <!-- Hotel Details -->
+                        <div class="card-body">
+
+                            <div class="d-flex justify-content-between">
+
+                                <h5 class="fw-bold">
+                                    Green Valley Villa
+                                </h5>
+
+                                <span class="badge bg-primary">
+                                    4.3 ★
+                                </span>
+
+                            </div>
+
+                            <p class="text-muted">
+                                📍 Lonavala, Maharashtra
+                            </p>
+
+                            <p class="small">
+                                Peaceful villa surrounded by nature with
+                                a private pool, garden and modern rooms.
+                            </p>
+
+                            <div class="d-flex justify-content-between align-items-center">
+
+                                <h5 class="text-primary">
+                                    ₹7,999
+                                    <small class="text-muted">
+                                        /night
+                                    </small>
+                                </h5>
+
+                                <a href="booking.html" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#hotelbook">
+                                    Book
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Hotel 3 -->
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="card hotel-card shadow-sm border-0 h-100">
+
+                        <!-- Hotel Carousel -->
+                        <div id="hotelCarousel23" class="carousel slide carousel-fade">
+
+                            <div class="carousel-inner">
+
+                                <div class="carousel-item active">
+                                    <img src="Hotel-img/villa-1.webp" class="d-block w-100"
+                                        style="height: 250px; object-fit: cover;" alt="Hotel Image 1">
+                                </div>
+
+                                <div class="carousel-item">
+                                    <img src="Hotel-img/hotel-img2.png" class="d-block w-100"
+                                        style="height: 250px; object-fit: cover;" alt="Hotel Image 2">
+                                </div>
+
+                                <div class="carousel-item">
+                                    <img src="Hotel-img/hotel-img3.png" class="d-block w-100"
+                                        style="height: 250px; object-fit: cover;" alt="Hotel Image 3">
+                                </div>
+
+                            </div>
+
+                            <button class="carousel-control-prev" type="button" data-bs-target="#hotelCarousel23"
+                                data-bs-slide="prev">
+
+                                <span class="carousel-control-prev-icon"></span>
+
+                            </button>
+
+                            <button class="carousel-control-next" type="button" data-bs-target="#hotelCarousel23"
+                                data-bs-slide="next">
+
+                                <span class="carousel-control-next-icon"></span>
+
+                            </button>
+
+                            <div class="carousel-caption d-none d-md-block">
+                                <span class="badge bg-dark">
+                                    Explore More Photos
+                                </span>
+                            </div>
+
+                        </div>
+
+                        <!-- Hotel Details -->
+                        <div class="card-body">
+
+                            <div class="d-flex justify-content-between">
+
+                                <h5 class="fw-bold">
+                                    Royal Lake Villa
+                                </h5>
+
+                                <span class="badge bg-primary">
+                                    4.7 ★
+                                </span>
+
+                            </div>
+
+                            <p class="text-muted">
+                                📍 Udaipur, Rajasthan
+                            </p>
+
+                            <p class="small">
+                                Elegant lakeside villa with beautiful views,
+                                private balcony, swimming pool and fine dining
+                            </p>
+
+                            <div class="d-flex justify-content-between align-items-center">
+
+                                <h5 class="text-primary">
+                                    ₹8,999
+                                    <small class="text-muted">
+                                        /night
+                                    </small>
+                                </h5>
+
+                                <a href="booking.html" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#hotelbook">
+                                    Book
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+    </section>
+
+
+    <!-- ================= FILTER SECTION ================= -->
+
+    <section class="container py-5">
+
+        <div class="card shadow-sm border-0">
+
+            <div class="card-body">
+
+                <h4 class="fw-bold mb-4">
+                    Filter Hotels
+                </h4>
+
+                <div class="row g-4">
+
+
+                    <div class="col-md-3">
+
+                        <label class="form-label fw-bold">
+                            Property Type
+                        </label>
+
+                        <select class="form-select">
+
+                            <option>All Properties</option>
+                            <option>Hotels</option>
+                            <option>Resorts</option>
+                            <option>Apartments</option>
+                            <option>Villas</option>
+                            <option>Guest Houses</option>
+                            <option>Hostels</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="col-md-3">
+
+                        <label class="form-label fw-bold">
+                            Price Range
+                        </label>
+
+                        <select class="form-select">
+
+                            <option>Any Price</option>
+                            <option>₹1,000 - ₹3,000</option>
+                            <option>₹3,000 - ₹5,000</option>
+                            <option>₹5,000 - ₹10,000</option>
+                            <option>₹10,000+</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="col-md-3">
+
+                        <label class="form-label fw-bold">
+                            Rating
+                        </label>
+
+                        <select class="form-select">
+
+                            <option>Any Rating</option>
+                            <option>5 Star</option>
+                            <option>4 Star & Above</option>
+                            <option>3 Star & Above</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="col-md-3">
+
+                        <label class="form-label fw-bold">
+                            Sort By
+                        </label>
+
+                        <select class="form-select">
+
+                            <option>Recommended</option>
+                            <option>Price: Low to High</option>
+                            <option>Price: High to Low</option>
+                            <option>Highest Rated</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer id="contact" class="bg-dark text-white py-5">
+
+        <div class="container">
+
+            <div class="row g-4">
+
+                <div class="col-md-4">
+
+                    <h4 class="fw-bold">
+                        StayNest
+                    </h4>
+
+                    <p class="text-white-50">
+                        Find the perfect hotel for your next
+                        trip with comfortable stays and
+                        affordable prices.
+                    </p>
+
+                </div>
+
+
+                <div class="col-md-4">
+
+                    <h5>
+                        Quick Links
+                    </h5>
+
+                    <p>
+                        <a href="index.html" class="text-white-50 text-decoration-none">
+                            Home
+                        </a>
+                    </p>
+
+                    <p>
+                        <a href="destination.html" class="text-white-50 text-decoration-none">
+                            Hotels
+                        </a>
+                    </p>
+
+                    <p>
+                        <a href="booking.html" class="text-white-50 text-decoration-none">
+                            Booking
+                        </a>
+                    </p>
+
+                </div>
+
+
+                <div class="col-md-4">
+
+                    <h5>
+                        Contact Us
+                    </h5>
+
+                    <p class="text-white-50">
+                        📧 staynest@gmail.com
+                    </p>
+
+                    <p class="text-white-50">
+                        📞 +91 98765 43210
+                    </p>
+
+                    <p class="text-white-50">
+                        📍 Pune, Maharashtra
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <hr>
+
+            <p class="text-center text-white-50 mb-0">
+                © 2026 Booking.Com. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Bootstrap JS -->
+
+
+
+    <script src="login.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+</body>
+
+</html>

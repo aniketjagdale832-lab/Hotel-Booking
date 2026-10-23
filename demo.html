@@ -1,0 +1,1121 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Booking.Com - Hotel Booking</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+        crossorigin="anonymous">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar-brand {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .hero-img {
+            height: 75vh;
+            object-fit: cover;
+            filter: brightness(65%);
+        }
+
+        .carousel-caption {
+            bottom: 30%;
+        }  
+
+         .search-box {
+            margin-top: -60px;
+            position: relative;
+            z-index: 10;
+        }
+
+         .hotel-card img {
+            height: 220px;
+            object-fit: cover;
+            overflow: auto;
+        }
+
+        .hotel-card {
+            transition: 0.3s;
+        }
+
+        .hotel-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .destination-card img {
+            height: 230px;
+            object-fit: cover;
+        }
+
+        .destination-card {
+            transition: 0.3s;
+            overflow: hidden;
+        }
+
+        .destination-card:hover {
+            transform: scale(1.02);
+        }
+
+        .feature-icon {
+            font-size: 40px;
+        }
+
+        .offer-section {
+            background: linear-gradient(135deg, #0d6efd, #6610f2);
+        }
+
+        footer {
+            background-color: #111827;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+
+        <div class="container">
+
+            <a href="index.html" class="navbar-brand text-primary fw-bold">
+                Booking.Com
+            </a>
+
+            <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                    <li class="nav-item">
+                        <a href="index.html"
+                            class="nav-link active">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="destination.html"
+                            class="nav-link">
+                            Hotels
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="booking.html"
+                            class="nav-link">
+                            Booking
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#contact"
+                            class="nav-link">
+                            Contact
+                        </a>
+                    </li>
+
+                    <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+                        <a href="sign-up.html"
+                            class="btn btn-danger px-4">
+                            Sign Up
+                        </a>
+                    </li>
+
+                    <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+                        <a href="login.html"
+                            class="btn btn-primary px-4">
+                            Login
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- ================= HERO SECTION ================= -->
+
+    <section>
+
+        <div id="hotelCarousel"
+            class="carousel slide"
+            data-bs-ride="carousel">
+
+            <div class="carousel-indicators">
+
+                <button type="button"
+                    data-bs-target="#hotelCarousel"
+                    data-bs-slide-to="0"
+                    class="active"></button>
+
+                <button type="button"
+                    data-bs-target="#hotelCarousel"
+                    data-bs-slide-to="1"></button>
+
+                <button type="button"
+                    data-bs-target="#hotelCarousel"
+                    data-bs-slide-to="2"></button>
+
+            </div>
+
+
+            <div class="carousel-inner">
+
+                <!-- Slide 1 -->
+
+                <div class="carousel-item active">
+
+                    <img src="Hotel-img/hotel-img1.png"
+                        class="d-block w-100  hero-img"
+                        alt="Luxury Hotel">
+
+                    <div class="carousel-caption text-white">
+
+                        <h1 class="display-4 fw-bold">
+                            Find Your Perfect Stay
+                        </h1>
+
+                        <p class="lead fw-bold">
+                            Discover beautiful hotels at the best prices
+                        </p>
+
+                        <a href="destination.html"
+                            class="btn btn-primary btn-lg">
+                            Explore Hotels
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Slide 2 -->
+
+                <div class="carousel-item">
+
+                    <img src="Hotel-img/hotel-img2.png"
+                        class="d-block w-100  hero-img"
+                        alt="Hotel Room">
+
+                    <div class="carousel-caption text-white">
+
+                        <h1 class="display-4 fw-bold">
+                            Luxury & Comfort
+                        </h1>
+
+                        <p class="lead">
+                            Enjoy premium rooms and world-class facilities
+                        </p>
+
+                        <a href="booking.html"
+                            class="btn btn-danger btn-lg">
+                            Book Now
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Slide 3 -->
+
+                <div class="carousel-item">
+
+                    <img src="Hotel-img/hotel-img3.png"
+                        class="d-block w-100  hero-img"
+                        alt="Beautiful Hotel">
+
+                    <div class="carousel-caption text-white">
+
+                        <h1 class="display-4 fw-bold">
+                            Make Your Trip Special
+                        </h1>
+
+                        <p class="lead">
+                            Book your dream hotel with us
+                        </p>
+
+                        <a href="destination.html"
+                            class="btn btn-warning btn-lg">
+                            View Destinations
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <button class="carousel-control-prev"
+                type="button"
+                data-bs-target="#hotelCarousel"
+                data-bs-slide="prev">
+
+                <span class="carousel-control-prev-icon"></span>
+
+            </button>
+
+
+            <button class="carousel-control-next"
+                type="button"
+                data-bs-target="#hotelCarousel"
+                data-bs-slide="next">
+
+                <span class="carousel-control-next-icon"></span>
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SEARCH BOX ================= -->
+
+    <section class="container search-box">
+
+        <div class="card shadow-lg border-0 mt-5">
+
+            <div class="card-body p-4">
+
+                <h4 class="fw-bold mb-4">
+                    Where are you going?
+                </h4>
+
+                <form>
+
+                    <div class="row g-3">
+
+                        <div class="col-lg-3">
+
+                            <label class="form-label fw-bold">
+                                Destination
+                            </label>
+
+                            <input type="text"
+                                class="form-control"
+                                placeholder="City or hotel">
+
+                        </div>
+
+
+                        <div class="col-lg-2">
+
+                            <label class="form-label fw-bold">
+                                Check-in
+                            </label>
+
+                            <input type="date"
+                                class="form-control">
+
+                        </div>
+
+
+                        <div class="col-lg-2">
+
+                            <label class="form-label fw-bold">
+                                Check-out
+                            </label>
+
+                            <input type="date"
+                                class="form-control">
+
+                        </div>
+
+
+                        <div class="col-lg-2">
+
+                            <label class="form-label fw-bold">
+                                Guests
+                            </label>
+
+                            <select class="form-select">
+
+                                <option>1 Guest</option>
+                                <option>2 Guests</option>
+                                <option>3 Guests</option>
+                                <option>4 Guests</option>
+                                <option>5+ Guests</option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="col-lg-3 d-flex align-items-end">
+
+                            <button type="submit"
+                                class="btn btn-primary w-100 py-2">
+
+                                Search Hotels
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= TRENDING DESTINATIONS ================= -->
+
+    <section class="py-5">
+
+        <div class="container">
+
+            <div class="text-center mb-5">
+
+                <h2 class="fw-bold">
+                    Trending Destinations
+                </h2>
+
+                <p class="text-muted">
+                    Explore the most popular destinations in India
+                </p>
+
+            </div>
+
+
+            <div class="row g-4">
+
+                <!-- Goa -->
+
+                <div class="col-md-4">
+
+                    <div class="card destination-card shadow border-0">
+
+                        <img src="Hotel-img/hotel-img1.png"
+                            class="card-img-top"
+                            alt="Goa">
+
+                        <div class="card-body">
+
+                            <h4 class="fw-bold">
+                                Goa
+                            </h4>
+
+                            <p class="text-muted">
+                                Beautiful beaches and luxury resorts
+                            </p>
+
+                            <a href="destination.html"
+                                class="btn btn-outline-primary">
+                                Explore Goa
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Mumbai -->
+
+                <div class="col-md-4">
+
+                    <div class="card destination-card shadow border-0">
+
+                        <img src="Hotel-img/hotel-img2.png"
+                            class="card-img-top"
+                            alt="Mumbai">
+
+                        <div class="card-body">
+
+                            <h4 class="fw-bold">
+                                Mumbai
+                            </h4>
+
+                            <p class="text-muted">
+                                Experience India's city of dreams
+                            </p>
+
+                            <a href="destination.html"
+                                class="btn btn-outline-primary">
+                                Explore Mumbai
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Delhi -->
+
+                <div class="col-md-4">
+
+                    <div class="card destination-card shadow border-0">
+
+                        <img src="Hotel-img/hotel-img3.png"
+                            class="card-img-top"
+                            alt="Delhi">
+
+                        <div class="card-body">
+
+                            <h4 class="fw-bold">
+                                Delhi
+                            </h4>
+
+                            <p class="text-muted">
+                                Discover history, culture and modern luxury
+                            </p>
+
+                            <a href="destination.html"
+                                class="btn btn-outline-primary">
+                                Explore Delhi
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FEATURED HOTELS ================= -->
+
+    <section class="py-5 bg-light">
+
+        <div class="container">
+
+            <div class="text-center mb-5">
+
+                <h2 class="fw-bold">
+                    Featured Hotels
+                </h2>
+
+                <p class="text-muted">
+                    Hand-picked hotels for your perfect stay
+                </p>
+
+            </div>
+
+
+            <div class="row g-4">
+
+                <!-- Hotel 1 -->
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="card hotel-card shadow border-0 h-100">
+
+                        <img src="Hotel-img/hotel-img1.png"
+                            class="card-img-top"
+                            alt="Grand Palace Hotel">
+
+                        <div class="card-body">
+
+                            <div class="d-flex justify-content-between">
+
+                                <h5 class="fw-bold">
+                                    Grand Palace Hotel
+                                </h5>
+
+                                <span class="badge bg-primary">
+                                    4.8 ★
+                                </span>
+
+                            </div>
+
+                            <p class="text-muted">
+                                📍 Goa, India
+                            </p>
+
+                            <p>
+                                ⭐⭐⭐⭐⭐
+                            </p>
+
+                            <h5 class="text-primary">
+                                ₹4,999
+                                <small class="text-muted">
+                                    / night
+                                </small>
+                            </h5>
+
+                            <a href="booking.html"
+                                class="btn btn-primary w-100 mt-2">
+                                Book Now
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Hotel 2 -->
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="card hotel-card shadow border-0 h-100">
+
+                        <img src="Hotel-img/hotel-img2.png"
+                            class="card-img-top"
+                            alt="Royal Mumbai Hotel">
+
+                        <div class="card-body">
+
+                            <div class="d-flex justify-content-between">
+
+                                <h5 class="fw-bold">
+                                    Royal Mumbai Hotel
+                                </h5>
+
+                                <span class="badge bg-primary">
+                                    4.7 ★
+                                </span>
+
+                            </div>
+
+                            <p class="text-muted">
+                                📍 Mumbai, India
+                            </p>
+
+                            <p>
+                                ⭐⭐⭐⭐⭐
+                            </p>
+
+                            <h5 class="text-primary">
+                                ₹5,499
+                                <small class="text-muted">
+                                    / night
+                                </small>
+                            </h5>
+
+                            <a href="booking.html"
+                                class="btn btn-primary w-100 mt-2">
+                                Book Now
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Hotel 3 -->
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="card hotel-card shadow border-0 h-100">
+
+                        <img src="Hotel-img/hotel-img3.png"
+                            class="card-img-top"
+                            alt="Delhi Luxury Hotel">
+
+                        <div class="card-body">
+
+                            <div class="d-flex justify-content-between">
+
+                                <h5 class="fw-bold">
+                                    Delhi Luxury Hotel
+                                </h5>
+
+                                <span class="badge bg-primary">
+                                    4.9 ★
+                                </span>
+
+                            </div>
+
+                            <p class="text-muted">
+                                📍 New Delhi, India
+                            </p>
+
+                            <p>
+                                ⭐⭐⭐⭐⭐
+                            </p>
+
+                            <h5 class="text-primary">
+                                ₹6,499
+                                <small class="text-muted">
+                                    / night
+                                </small>
+                            </h5>
+
+                            <a href="booking.html"
+                                class="btn btn-primary w-100 mt-2">
+                                Book Now
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= WHY CHOOSE US ================= -->
+
+    <section class="py-5">
+
+        <div class="container">
+
+            <div class="text-center mb-5">
+
+                <h2 class="fw-bold">
+                    Why Choose Booking.Com?
+                </h2>
+
+                <p class="text-muted">
+                    We make hotel booking simple and convenient
+                </p>
+
+            </div>
+
+
+            <div class="row g-4 text-center">
+
+                <div class="col-md-4">
+
+                    <div class="p-4">
+
+                        <div class="feature-icon fs-1 mb-3">
+                            🔒
+                        </div>
+
+                        <h4 class="fw-bold">
+                            Safe & Secure
+                        </h4>
+
+                        <p class="text-muted">
+                            Your booking information is protected
+                            with secure technology.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-4">
+
+                    <div class="p-4">
+
+                        <div class="feature-icon fs-1 mb-3">
+                            💰
+                        </div>
+
+                        <h4 class="fw-bold">
+                            Best Prices
+                        </h4>
+
+                        <p class="text-muted">
+                            Find comfortable hotels at affordable
+                            and competitive prices.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-4">
+
+                    <div class="p-4">
+
+                        <div class="feature-icon fs-1 mb-3">
+                            ⭐
+                        </div>
+
+                        <h4 class="fw-bold">
+                            Quality Hotels
+                        </h4>
+
+                        <p class="text-muted">
+                            Choose from carefully selected hotels
+                            and trusted properties.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SPECIAL OFFER ================= -->
+
+    <section class="offer-section py-5 text-white bg-dark">
+
+        <div class="container">
+
+            <div class="row align-items-center">
+
+                <div class="col-md-8">
+
+                    <h2 class="fw-bold">
+                        Get 20% Off Your First Booking!
+                    </h2>
+
+                    <p class="lead mb-0">
+                        Discover amazing hotels and save more
+                        on your next trip.
+                    </p>
+
+                </div>
+
+
+                <div class="col-md-4 text-md-end mt-3 mt-md-0">
+
+                    <a href="booking.html"
+                        class="btn btn-light btn-lg">
+                        Book Now
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CUSTOMER REVIEWS ================= -->
+
+    <section class="py-5 bg-light">
+
+        <div class="container">
+
+            <div class="text-center mb-5">
+
+                <h2 class="fw-bold">
+                    What Our Customers Say
+                </h2>
+
+                <p class="text-muted">
+                    Read reviews from our happy customers
+                </p>
+
+            </div>
+
+
+            <div class="row g-4">
+
+                <div class="col-md-4">
+
+                    <div class="card shadow-sm border-0 h-100">
+
+                        <div class="card-body">
+
+                            <div class="mb-3">
+                                ⭐⭐⭐⭐⭐
+                            </div>
+
+                            <p>
+                                "The booking process was very easy
+                                and the hotel was excellent."
+                            </p>
+
+                            <h6 class="fw-bold">
+                                Rahul Sharma
+                            </h6>
+
+                            <small class="text-muted">
+                                Mumbai
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-4">
+
+                    <div class="card shadow-sm border-0 h-100">
+
+                        <div class="card-body">
+
+                            <div class="mb-3">
+                                ⭐⭐⭐⭐⭐
+                            </div>
+
+                            <p>
+                                "Great hotel options and affordable
+                                prices. I will book again."
+                            </p>
+
+                            <h6 class="fw-bold">
+                                Priya Patil
+                            </h6>
+
+                            <small class="text-muted">
+                                Pune
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-4">
+
+                    <div class="card shadow-sm border-0 h-100">
+
+                        <div class="card-body">
+
+                            <div class="mb-3">
+                                ⭐⭐⭐⭐⭐
+                            </div>
+
+                            <p>
+                                "Very good experience. The website
+                                is simple and easy to use."
+                            </p>
+
+                            <h6 class="fw-bold">
+                                Amit Singh
+                            </h6>
+
+                            <small class="text-muted">
+                                Delhi
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= NEWSLETTER ================= -->
+
+    <section class="py-5 ">
+
+        <div class="container">
+
+            <div class="row justify-content-center bg-dark text-white p-5 rounded-3">
+
+                <div class="col-lg-8 text-center">
+
+                    <h2 class="fw-bold">
+                        Get Travel Inspiration
+                    </h2>
+
+                    <p class="text-muted">
+                        Subscribe to receive hotel deals and
+                        travel updates.
+                    </p>
+
+
+                    <form class="row g-2 justify-content-center">
+
+                        <div class="col-md-8">
+
+                            <input type="email"
+                                class="form-control form-control-lg"
+                                placeholder="Enter your email">
+
+                        </div>
+
+                        <div class="col-md-4">
+
+                            <button
+                                class="btn btn-primary btn-lg w-100">
+                                Subscribe
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer id="contact"
+        class="text-white bg-dark pt-5 pb-3">
+
+        <div class="container">
+
+            <div class="row g-4">
+
+                <div class="col-md-4">
+
+                    <h4 class="fw-bold">
+                        Booking.Com
+                    </h4>
+
+                    <p class="text-white-50">
+                        Find comfortable hotels, discover
+                        beautiful destinations and make your
+                        travel memorable.
+                    </p>
+
+                </div>
+
+
+                <div class="col-md-2">
+
+                    <h5>
+                        Quick Links
+                    </h5>
+
+                    <ul class="list-unstyled">
+
+                        <li class="mb-2">
+                            <a href="index.html"
+                                class="text-white-50 text-decoration-none">
+                                Home
+                            </a>
+                        </li>
+
+                        <li class="mb-2">
+                            <a href="destination.html"
+                                class="text-white-50 text-decoration-none">
+                                Hotels
+                            </a>
+                        </li>
+
+                        <li class="mb-2">
+                            <a href="booking.html"
+                                class="text-white-50 text-decoration-none">
+                                Booking
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="col-md-3">
+
+                    <h5>
+                        Contact
+                    </h5>
+
+                    <p class="text-white-50 mb-2">
+                        📧 booking@example.com
+                    </p>
+
+                    <p class="text-white-50 mb-2">
+                        📞 +91 98765 43210
+                    </p>
+
+                    <p class="text-white-50">
+                        📍 Pune, Maharashtra, India
+                    </p>
+
+                </div>
+
+
+                <div class="col-md-3">
+
+                    <h5>
+                        Follow Us
+                    </h5>
+
+                    <div class="d-flex gap-3">
+
+                        <a href="#"
+                            class="btn btn-outline-light">
+                            Facebook
+                        </a>
+
+                        <a href="#"
+                            class="btn btn-outline-light">
+                            Instagram
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <hr class="mt-4">
+
+
+            <div class="text-center text-white-50">
+
+                <p class="mb-0">
+                    © 2026 Booking.Com. All Rights Reserved.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Bootstrap JS -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous">
+    </script>
+
+</body>
+
+</html>
+
